@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function chk() {
+	var str = "내가 좋아하는 영화는\n";
+	for (var i=0; i < frm.movie.length; i ++) {
+		if (frm.movie[i].selected) {
+			str +=frm.movie[i].value +  "\n";
+			/* break; */ 
+		}
+	}
+	alert(str);	
+	
+}
+</script>
+</head>
+<body>
+ <h2>좋아하는 영화는</h2>
+ <form name="frm">
+ <!-- multiple: 여러개 선택  size="3" : List Box -->
+ <select name="movie"  multiple="multiple" size="4">
+      <option value="배트맨">배트맨</option>
+      <option value="스파더">스파더</option>
+      <option value="슈퍼맨">슈퍼맨</option>
+      <option value="호빵맨" selected="selected">호빵맨</option>
+      <option value="그린맨">그린맨</option>
+
+ </select><p>
+ <input type="button" value="확인" onclick="chk()">
+</form>
+</body>
+</html>

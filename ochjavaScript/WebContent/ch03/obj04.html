@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+
+	function Dog(color, name, age){
+		this.color = color;
+		this.name = name;
+		this.age = age;
+	}
+	var  myDog = new Dog("흰색", "마루", 1);
+	Object.defineProperty(myDog, 'color', {enumerable : false});
+	
+	document.write(Object.keys(myDog) +"<br>");
+	
+	document.write(Object.getOwnPropertyNames(myDog));
+	document.write("<hr>");
+	document.write(myDog.hasOwnProperty("color") +"<br>");
+	document.write(myDog.hasOwnProperty("name") +"<br>");
+	myDog.hasOwnProperty("name");
+	
+	document.write("<p>");
+	document.write("color : " + myDog.propertyIsEnumerable("color")+"<br>"); 
+	document.write("name : " + myDog.propertyIsEnumerable("name")+"<br>");
+	document.write("age : " + myDog.propertyIsEnumerable("age")+"<br>");
+	
+</script>
+<body>
+	<h1> obj04 </h1>
+	enumerable 예제<p>
+</body>
+</html>

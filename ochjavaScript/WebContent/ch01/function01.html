@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	
+	function addNum(x, y,z){
+		if(z == undefined){
+			z=0;
+		}
+		if(y == undefined){
+			y=0;
+		}
+		return x+y+z;	
+	}
+	
+	document.write("addNum(1, 2, 3) -> "+addNum(1, 2, 3)+"<br>");
+	document.write("addNum(1, 2) -> "+addNum(1, 2)+"<br>");
+	document.write("addNum(1) -> "+addNum(1)+"<br>");
+	
+</script>
+<body>
+	<h1>function01</h1>
+		parameter 전달
+</body>
+</html>

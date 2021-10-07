@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+
+	var gildong = {age : 18};
+	gildong.age = 20;
+	document.write(gildong.age + "<br>");
+	
+	Object.defineProperty(gildong, "changeAge",
+									{	set : function(n){
+											this.age = this.age - n;
+										}	
+		
+									}
+						);
+	gildong.changeAge = 5;
+	document.write("<p>" +gildong.age);
+	
+	Object.defineProperty(gildong, "americanAge", 
+									{get : function() {
+										return this.age -1;
+										}
+									}
+						);
+	document.write("<br>" + gildong.americanAge);
+	
+</script>
+<body>
+	<h1> obj06 </h1>
+	getter와 setter 메소드 예제<p>
+</body>
+</html>
