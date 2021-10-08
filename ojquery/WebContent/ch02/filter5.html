@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').css('background','orange')
+		.filter(':even').css('color','red')
+		.end()		// 앞의 filter를 종료하고 한단계 뒤로
+		.filter(':odd').css('color','blue');
+	});
+</script></head>
+<body>
+<h1>월요일</h1>
+<h1>비온다</h1>
+<h1>귀찮다</h1>
+<h1>늦게 일어났다</h1>
+<h1>지각</h1>
+<h1>대박</h1>
+</body>
+</html>
